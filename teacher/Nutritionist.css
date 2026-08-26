@@ -1,0 +1,304 @@
+/* 全域重設與字體 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+body {
+    background-color: #fafafa;
+    color: #333;
+}
+
+/* 導覽列 Navbar */
+.navbar {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #666;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #27ae60;
+    font-weight: 500;
+}
+
+.user-status {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.calorie-badge {
+    background-color: #e8f8f0;
+    color: #27ae60;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #ddd;
+    overflow: hidden;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===================================================
+   主要內容區 Main Container（已優化置中與放大體積）
+   =================================================== */
+.main-container {
+    max-width: 650px;       /* 💡 寬度從 560px 大幅擴展至 650px，佔用更多版面 */
+    width: 90%;             
+    margin: 80px auto;      /* 上下外距提高到 80px，留白更大氣 */
+    padding: 0;             
+    display: flex;          /* 使用 flex 達成完美水平居中 */
+    justify-content: center;
+    align-items: center;
+    gap: 0; 
+}
+
+/* 左側文字與圖片（保留彈性，目前在您的 HTML 中隱藏不影響排版） */
+.left-content .subtitle {
+    color: #27ae60;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.left-content h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #111;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 320px;
+    background: linear-gradient(135deg, #f0f4f1 0%, #e2e8f0 100%);
+    border-radius: 12px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #718096;
+    font-size: 14px;
+}
+
+.features-list {
+    list-style: none;
+}
+
+.features-list li {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ===================================================
+   右側登入卡片元件（整體等比例放大）
+   =================================================== */
+.login-card {
+    background-color: #ffffff;
+    border-radius: 20px;     /* 圓角微調得更精緻 */
+    padding: 54px 50px;     /* 💡 上下內距拉高到 54px，左右保持 50px，視覺延伸 */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04); /* 柔化陰影 */
+    border: 1px solid #f0f0f0;
+    width: 100%;            /* 強制撐滿外層 650px 容器 */
+}
+
+.card-tabs {
+    display: flex;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 35px;    /* 增加下方留白間距 */
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 15px;          /* 💡 頁籤加高 */
+    text-align: center;
+    background: none;
+    border: none;
+    font-size: 18px;        /* 💡 頁籤字體由 16px 放大到 18px */
+    cursor: pointer;
+    color: #999;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.tab-btn.active {
+    color: #27ae60;
+    border-bottom: 3px solid #27ae60; /* 加粗選中底線 */
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 24px;    /* 💡 表單群組間距加寬 */
+}
+
+.form-group label {
+    display: block;
+    font-size: 15px;        /* 💡 欄位名稱標題由 14px 放大到 15px */
+    color: #555;            /* 微調顏色提升對比 */
+    margin-bottom: 10px;    /* 留白增加 */
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.form-control {
+    width: 100%;
+    padding: 15px 16px;     /* 💡 輸入框內距由 12px 放大到 15px，極佳的輸入體感 */
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;     /* 邊框圓角加大 */
+    font-size: 15px;        /* 💡 輸入字體由 14px 放大到 15px */
+    background-color: #fafafa;
+    transition: all 0.2s;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #27ae60;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1); /* 新增聚焦外顯光暈 */
+}
+
+.forgot-pwd {
+    position: absolute;
+    right: 4px;
+    top: -18px;             /* 配合標籤尺寸調整定位高度 */
+    font-size: 13px;        /* 💡 忘記密碼文字由 12px 放大到 13px */
+    color: #27ae60;
+    text-decoration: none;
+}
+.forgot-pwd:hover {
+    text-decoration: underline;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;        /* 💡 記住登入選框文字放大到 14px */
+    color: #666;
+    margin-bottom: 30px;    /* 留白增加 */
+}
+
+/* 核取方塊微調大小 */
+.form-options input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 16px;          /* 💡 按鈕高度由 14px 增高到 16px */
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 8px;     
+    font-size: 18px;        /* 💡 主按鈕字體由 16px 大幅放大到 18px */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.submit-btn:hover {
+    background-color: #219653;
+}
+.submit-btn:active {
+    transform: scale(0.99); /* 按下時的微回饋 */
+}
+
+.divider {
+    text-align: center;
+    margin: 30px 0;         /* 留白加大 */
+    font-size: 13px;        /* 💡 分隔文字微調大 */
+    color: #aaa;
+    position: relative;
+}
+
+.social-login {
+    display: flex;
+    gap: 15px;
+}
+
+.social-btn {
+    flex: 1;
+    padding: 14px;          /* 💡 協力登入按鈕由 10px 大幅增高到 14px */
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 15px;        /* 💡 按鈕文字從 14px 提升至 15px */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: #444;
+    transition: background-color 0.2s;
+}
+.social-btn:hover {
+    background-color: #fcfcfc;
+    border-color: #cccccc;
+}
+
+/* 響應式斷點 (手機板自動適應) */
+@media (max-width: 768px) {
+    .main-container {
+        width: 92%;
+        margin: 30px auto;  
+    }
+    .login-card {
+        padding: 35px 25px; /* 在小螢幕上手機版自動縮減內距，防止內容過擠 */
+    }
+    .navbar {
+        padding: 15px 20px;
+    }
+    .nav-links {
+        display: none;
+    }
+}

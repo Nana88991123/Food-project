@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台中市公共運動空間</title>
+
+    <!-- Google 字體 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- 引入外部 CSS -->
+  <link rel="stylesheet" href="sport.css">
+  
+  <!-- 引入外部 JS（使用 defer 確保 DOM 載入後執行） -->
+  <script src="sport.js" defer></script>
+</head>
+<body>
+
+    <!-- 頂部導覽列 -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="卡路里 calorie">
+      </a>
+      <nav class="nav-links">
+        <a href="../index/index.html">首頁(熱量計算)</a>
+        <a href="./sport.html" class="active">運動空間</a>
+        <a href="../teacher/health.html">營養師介紹</a>
+        
+      </nav>
+    </div>
+  </header>
+
+  <!-- 據點詳細清單區 -->
+  <main class="location-page-container">
+    
+    <!-- 返回按鈕 -->
+    <div class="back-nav">
+      <a href="./sport.html" class="btn-back">
+        &#8592; 返回運動空間選擇
+      </a>
+    </div>
+    <p>
+        <div class="place-card">
+            <h2 class="place-name">北區國民運動中心</h2>
+            <h3>位於北區崇德路一段55號（中正公園內），擁有全國首創的三合一水上設施（含5米深水池）。</h3>
+        
+        <a href="https://www.google.com/maps/search/?api=1&query=台中市北區國民運動中心+台中市北區崇德路一段55號" target="_blank" rel="noopener noreferrer" class="btn-map-link"
+                target="_blank" 
+                rel="noopener noreferrer">
+          📍 Google 地圖導航
+        </a>
+        </div>
+        <div class="place-card">
+            <h2 class="place-name">朝馬國民運動中心</h2>
+            <h3>位於西屯區朝貴路199號，提供綜合球場與完善的健身設施。</h3>
+       
+            <a href="https://maps.app.goo.gl/fGSq7o8CkX9EKLK99"
+                target="_blank" 
+                rel="noopener noreferrer">📍 
+                Google 地圖導航</a>
+        </div> 
+          
+        
+        <div class="place-card">
+            <h2 class="place-name">南屯國民運動中心</h2>
+            <h3>位於南屯區黎明路一段998號，備有全市唯一的木質地板籃球場。</h3>
+        
+        <a href="https://maps.app.goo.gl/2mcR4SL1sD3f6weL9"
+                target="_blank" 
+                rel="noopener noreferrer">
+          📍 Google 地圖導航
+        </a>
+        </div>
+    
+    </p>
+</body>
+</html>

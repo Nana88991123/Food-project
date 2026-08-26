@@ -1,0 +1,403 @@
+/* ================================
+   卡路里智慧管家 - 變數設定
+   ================================ */
+:root {
+    --green: #27b86e;
+    --green-dark: #168f52;
+    --green-light: #eaf8f0;
+    --text: #1e293b;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --bg: #f8fafc;
+    --white: #ffffff;
+    --danger: #ef4444;
+    --radius: 14px;
+    --shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+/* 基礎重設與字型設定 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+}
+
+body {
+    background-color: #fcfdfc;
+    color: var(--text);
+    /* 💡 移除 display: flex，改用標準垂直排列，讓 Navbar 乖乖待在最上面 */
+}
+
+/* ================================
+   導覽列（Navbar）樣式
+   ================================ */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: 72px;
+    padding: 12px 5%;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    width: 100%;
+}
+
+.logo img {
+    display: block;
+    width: auto;
+    max-height: 42px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-links a {
+    padding: 9px 14px;
+    color: var(--muted);
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--green-dark);
+    background: var(--green-light);
+}
+
+.user-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.status-badge {
+    padding: 7px 11px;
+    color: var(--green-dark);
+    background: var(--green-light);
+    border-radius: 999px;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+/* 💡 將原本導覽列的 .avatar 改名為 .nav-avatar，避免跟營養師頭像衝突 */
+.nav-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #dbeafe;
+}
+
+/* ================================
+   預約區主容器
+   ================================ */
+/* 💡 將 .container 改為 .booking-container，與首頁的容器做區隔 */
+.booking-container {
+    display: flex;
+    max-width: 1180px;
+    width: 92%;
+    margin: 0 auto;
+    padding: 40px 0 56px;
+    gap: 40px;
+}
+
+/* 左側區塊 */
+.left-panel {
+    flex: 1.3;
+}
+
+.section-title {
+    font-size: 22px;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 24px;
+}
+
+/* 營養師卡片設計 */
+.card {
+    display: flex;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 20px;
+    gap: 20px;
+    transition: all 0.3s;
+}
+
+/* 選取狀態的綠色外框 */
+.card.active {
+    border: 2px solid #AAC0AF;
+    background-color: #fff;
+}
+
+/* 💡 將這裡的名稱改為 .teacher-avatar，確保大頭照可以正常顯示為 150px */
+.teacher-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.card-info {
+    flex: 1;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.card-header h3 {
+    font-size: 18px;
+    color: #1a1a1a;
+}
+
+.title-tag {
+    font-size: 14px;
+    color: var(--muted);
+    font-weight: normal;
+    margin-left: 6px;
+}
+
+.price {
+    color: #AAC0AF;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.price.gray {
+    color: #888;
+}
+
+.specialty {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 6px;
+}
+
+.rating {
+    font-size: 14px;
+    color: #1a1a1a;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.reviews {
+    color: #aaa;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+/* 標籤樣式 */
+.tags {
+    display: flex;
+    gap: 8px;
+}
+
+.tag {
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.tag.green {
+    background-color: #ebfaef;
+    color: #AAC0AF;
+}
+
+/* 右側預約面板 */
+.right-panel {
+    flex: 1;
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    align-self: flex-start;
+}
+
+.step-section {
+    margin-bottom: 28px;
+}
+
+.step-section h4 {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.month-text {
+    font-size: 14px;
+    color: #AAC0AF;
+    font-weight: bold;
+}
+
+/* 日曆排版 */
+.calendar {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.day-col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 12%;
+}
+
+.day-col span {
+    font-size: 12px;
+    color: #999;
+}
+
+.day-col button {
+    border: none;
+    background: none;
+    padding: 8px 0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+/* 啟用中的日期樣式 */
+.day-col.active button {
+    background-color: #AAC0AF;
+    color: #fff;
+}
+
+/* 時段排版 */
+.time-slots {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.time-btn {
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 13px;
+    color: #444;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.time-btn.active {
+    border: 1px solid #AAC0AF;
+    background-color: #ebfaef;
+    color: #AAC0AF;
+    font-weight: bold;
+}
+
+.time-btn.disabled {
+    background-color: #f5f5f5;
+    color: #ccc;
+    border-color: #e0e0e0;
+    cursor: not-allowed;
+}
+
+/* 費用明細 */
+.receipt {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.receipt-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #444;
+}
+
+.receipt-row.discount {
+    color: var(--danger);
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 8px 0;
+}
+
+.receipt-row.total {
+    font-weight: bold;
+    color: #1a1a1a;
+    font-size: 15px;
+}
+
+.total-price {
+    color: #AAC0AF;
+    font-size: 20px;
+}
+
+/* 按鈕樣式（已完美相容超連結 <a> 標籤） */
+.submit-btn {
+    display: block;          
+    text-align: center;      
+    text-decoration: none;   
+    width: 100%;
+    background-color: #AAC0AF;
+    color: #fff;
+    border: none;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+    box-sizing: border-box;  
+}
+
+.submit-btn:hover {
+    background-color: #FAAC9A;
+}
+
+/* ================================
+   RWD 響應式斷點設定
+   ================================ */
+@media (max-width: 850px) {
+    .navbar {
+        flex-wrap: wrap;
+        padding: 12px 4%;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .booking-container {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+    .right-panel {
+        width: 100%;
+    }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台中市公共運動空間</title>
+
+    <!-- Google 字體 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- 引入外部 CSS -->
+  <link rel="stylesheet" href="sport.css">
+  
+  <!-- 引入外部 JS（使用 defer 確保 DOM 載入後執行） -->
+  <script src="sport.js" defer></script>
+</head>
+<body>
+
+    <!-- 頂部導覽列 -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="卡路里 calorie">
+      </a>
+      <nav class="nav-links">
+        <a href="../index/index.html">首頁(熱量計算)</a>
+        <a href="./sport.html" class="active">運動空間</a>
+        <a href="../teacher/health.html">營養師介紹</a>
+        
+      </nav>
+    </div>
+  </header>
+
+  <!-- 據點詳細清單區 -->
+  <main class="location-page-container">
+    
+    <!-- 返回按鈕 -->
+    <div class="back-nav">
+      <a href="./sport.html" class="btn-back">
+        &#8592; 返回運動空間選擇
+      </a>
+    </div>
+    <p>
+        <div class="place-card">
+            <h2 class="place-name">ONCE Fitness 單次健身</h2>
+            <h3>特色：免綁約、免入會費，器材自由使用。收費：約 50 元 / 60 分鐘起（各分店略有不同，亦有實惠包月方案）。</h3>
+        
+        <a href="https://maps.app.goo.gl/eSm12ZBPbzJKoWt19"
+                target="_blank" 
+                rel="noopener noreferrer">
+          📍 Google 地圖導航
+        </a>
+        </div>
+        <div class="place-card">
+            <h2 class="place-name">超核心健身房（台中館）</h2>
+            <h3>特色：不推銷、不綁約，空間寬敞舒適。收費：單次入場約 200 元 / 次。</h3>
+       
+            <a href="https://maps.app.goo.gl/ZYecLX8kkujY4es57"
+                target="_blank" 
+                rel="noopener noreferrer">📍 
+                Google 地圖導航</a>
+         </div>
+          
+        
+        <div class="place-card">
+            <h2 class="place-name">Harfez fitness 力宴健身中心</h2>
+            <h3>特色：位於忠明路與台灣大道交會處，主打彈性收費與免綁約。</h3>
+        
+        <a href="https://maps.app.goo.gl/Acv34V4sGfA7BkHP6"
+                target="_blank" 
+                rel="noopener noreferrer">
+          📍 Google 地圖導航
+        </a>
+        </div>
+    
+    </p>
+</body>
+</html>
